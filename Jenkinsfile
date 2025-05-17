@@ -33,7 +33,7 @@ pipeline {
                 steps {
                     script {
                         sh """
-                        echo "final deployment of the pipeline
+                        echo "final deployment of the pipeline"
                         """
                     }
                 }
