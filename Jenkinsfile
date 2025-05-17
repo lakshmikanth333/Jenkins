@@ -28,6 +28,15 @@ pipeline {
                         """
                     }
                 }
-            }   
+            }  
+            stage('Deployment') {
+                steps {
+                    script {
+                        sh """
+                        echo "final deployment of the pipeline
+                        """
+                    }
+                }
+            }
         }
     }
