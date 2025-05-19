@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                sh "Hello guru"
+                echo "Look at the status"
                 """
             }
 
@@ -17,6 +17,9 @@ pipeline {
         }
         failure {
             echo "It got failed"
+        }
+        always {
+            echo "Always"
         }
     }
 
