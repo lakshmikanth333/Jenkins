@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry(3) {
+                retry(7) {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
                 echo "the string is: ${params.LAKSHMIKANTH}"
