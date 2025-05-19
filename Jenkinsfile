@@ -20,6 +20,9 @@ pipeline {
             steps {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
+                echo "Hello Mr ${param.LAKSHMIKANTH}
+                echo "current choices are ${param.SHIVA}
+                echo "guy is ${param.SAI}
                 """
             }
 
