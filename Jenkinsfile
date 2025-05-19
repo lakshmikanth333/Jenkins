@@ -39,6 +39,11 @@ pipeline {
 
         }
         stage('UAT') {
+            input {
+                meaasge "Should we continue"
+                ok "Yes, We should"
+                submitter "bob"
+            }
             steps {
                 sh """
                 echo "This is $ENVIRONMENT2 area"
