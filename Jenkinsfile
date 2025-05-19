@@ -15,12 +15,24 @@ pipeline {
 
         }
         stage('UAT') {
+            options {
+                timeout( time:10, unit: 'SECONDS')
+            }
+            }
             steps {
                 sh """
                 echo "This is $ENVIRONMENT2 area"
                 """
             }
         }
-          
+    
+    post {
+        success {
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed"
+        }
+        failure {
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed"
+        }
     }
+
 }
