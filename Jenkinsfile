@@ -16,16 +16,20 @@ pipeline {
         choice(name: 'ENVIRONMENT', choices: ['PROD', 'DEV', 'TEST'], description: 'select the environment')
         password(name: 'JENKINS', defaultValue: '3K3Klks$', description: 'password for the jenkins')
         file(name: 'DATA_FILE', description: 'upload a file')
-        booleanParam(name: 'TOGGLE', defaultValue: 'true', description: 'selected value')
+        booleanParam(name: 'TOGGLE', defaultValue: 'false', description: 'selected value')
     }
     stages {
         stage('Build') {
             steps {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
-                echo "Hello Mr ${param.LAKSHMIKANTH}
-                echo "current choices are ${param.SHIVA}
-                echo "guy is ${param.SAI} 
+                echo "the string is: ${param.LAKSHMIKANTH}
+                echo "the text is: ${param.SAI}
+                echo "the choice is: ${param.ENVIRONMENT}
+                echo "the password is: ${param.JENKINS}
+                echo "the file is: ${param.DATA_FILE}
+                echo "the toogle is: ${param.TOGGLE}
+     
                 """
             }
 
