@@ -21,17 +21,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                retry(3) {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
-                echo "the string is: ${param.LAKSHMIKANTH}
-                echo "the text is: ${param.SAI}
-                echo "the choice is: ${param.ENVIRONMENT}
-                echo "the password is: ${param.JENKINS}
-                echo "the file is: ${param.DATA_FILE}
-                echo "the toogle is: ${param.TOGGLE}
+                echo "the string is: ${params.LAKSHMIKANTH}"
+                echo "the text is: ${params.SAI}"
+                echo "the choice is: ${params.ENVIRONMENT}"
+                echo "the password is: ${params.JENKINS}"
+                echo "the file is: ${params.DATA_FILE}"
+                echo "the toogle is: ${params.TOGGLE}"
      
                 """
             }
+        }
 
         }
         stage('UAT') {
@@ -53,4 +55,5 @@ pipeline {
     }
 
 }
+
 
