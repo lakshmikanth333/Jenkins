@@ -15,7 +15,6 @@ pipeline {
             steps {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
-                sleep 20
                 """
             }
 
