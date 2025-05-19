@@ -6,7 +6,7 @@ pipeline {
 
     }
     options {
-        disableConcurrentBuilds()
+        // disableConcurrentBuilds()
         timeout(time:10, unit:'SECONDS')
         retry(2)
     }
@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """
-                echo "This is $ENVIRONMENT1 area"
+                echo "This is $ENVIRONMENT1 area
                 sleep 20
                 """
             }
@@ -23,7 +23,7 @@ pipeline {
         stage('UAT') {
             steps {
                 sh """
-                echo "This is $ENVIRONMENT2 area"
+                echo "This is $ENVIRONMENT2 area
                 """
             }
         }
