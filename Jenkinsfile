@@ -40,7 +40,7 @@ pipeline {
         stage('UAT') {
             steps {
                 sh """
-                echo "This is $ENVIRONMENT2 area"
+                echo "This is $ENVIRONMENT2 area
                 """
             }
         }
@@ -55,6 +55,6 @@ pipeline {
         }
     }
 
-
+}
 
 
