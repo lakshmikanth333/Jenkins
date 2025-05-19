@@ -16,6 +16,7 @@ pipeline {
         choice(name: 'Environment', choices: ['PROD', 'DEV', 'TEST'], description: 'select the environment')
         password(name: 'jenkins', defaultValue: '3K3Klks$', description: 'password for the jenkins')
         file(name: 'jenkins_file', defaultValue: 'jenkindfile', description: 'upload a file')
+        boolenParam(name: 'TOGGLE', defaultValue: 'true', description: 'selected value')
     }
     stages {
         stage('Build') {
