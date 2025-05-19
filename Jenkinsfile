@@ -39,12 +39,12 @@ pipeline {
 
         }
         stage('UAT') {
-            input {
-                message "Should we continue"
-                ok "Yes, We should"
-                submitter "bob"
+            // input {
+            //     message "Should we continue"
+            //     ok "Yes, We should"
+            //     submitter "bob"
                
-            }
+            // }
             steps {
                 when {
                     environment name: 'ENVIRONMENT2', value: 'UAT'
