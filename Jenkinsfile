@@ -13,9 +13,9 @@ pipeline {
     parameters {
         string(name: 'LAKSHMIKANTH', defaultValue: 'he is a devops engineer', description: "He is a genius guy")
         text(name: 'SAI', defaultValue: 'linux admin', description: 'etrade')
-        choice(name: 'Environment', choices: ['PROD', 'DEV', 'TEST'], description: 'select the environment')
-        password(name: 'jenkins', defaultValue: '3K3Klks$', description: 'password for the jenkins')
-        file(name: 'jenkins_file', description: 'upload a file')
+        choice(name: 'ENVIRONMENT', choices: ['PROD', 'DEV', 'TEST'], description: 'select the environment')
+        password(name: 'JENKINS', defaultValue: '3K3Klks$', description: 'password for the jenkins')
+        file(name: 'DATA_FILE', description: 'upload a file')
         booleanParam(name: 'TOGGLE', defaultValue: 'true', description: 'selected value')
     }
     stages {
