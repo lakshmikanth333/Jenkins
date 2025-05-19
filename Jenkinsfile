@@ -7,7 +7,7 @@ pipeline {
     }
     options {
         disableConcurrentBuilds()
-        timeout(time:100, unit:'SECONDS')
+        timeout(time:10, unit:'SECONDS')
         retry(3)
     }
     parameters {
@@ -43,8 +43,8 @@ pipeline {
                 message "Should we continue"
                 ok "Yes, We should"
                 submitter "bob"
-                parameters {
-                    string(name: 'BOB', defaultValue: 'Justin', description: 'should we hello')
+                // parameters {
+                    // string(name: 'BOB' defaultValue: 'Justin', description: 'should we hello')
                 }
             }
             steps {
