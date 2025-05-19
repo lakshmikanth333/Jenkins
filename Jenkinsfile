@@ -81,6 +81,13 @@ pipeline {
                         '''
                     }
                 }
+                stage('STAGE-3') {
+                    steps {
+                        sh """
+                        echo "Atta boy!"
+                        """
+                    }
+                }
             }
         }
     }
