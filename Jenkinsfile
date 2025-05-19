@@ -1,42 +1,23 @@
 pipeline {
-    agent { label 'test'}
-        stages {
-            stage('Build') {
-                steps {
-                    script {
-                        sh """
-                          echo "Hello this is build"
-                          """
-                    }
-                }
+    agent { label 'slave'}
+    stages {
+        stage('Build') {
+            steps {
+                sh """
+                echo "Hello guru"
+                """
             }
-            stage('Test') {
-                steps {
-                    script {
-                        sh """
-                        echo "This is test"
-                        """
-                    }
-                }
-            }   
-            stage('Run') {
-                steps {
-                    script {
-                        sh """
-                        echo "This is RUN"
-                        echo "Second run also"
-                        """
-                    }
-                }
-            }  
-            stage('Deployment') {
-                steps {
-                    script {
-                        sh """
-                        echo "final deployment of the pipeline"
-                        """
-                    }
-                }
-            }
+
+        }
+          
+    }
+    post {
+        success {
+            echo "It got succeeded"
+        }
+        failure {
+            echo "It got failed"
         }
     }
+
+}
