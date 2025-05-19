@@ -40,7 +40,7 @@ pipeline {
         }
         stage('UAT') {
             input {
-                meaasge "Should we continue"
+                message "Should we continue"
                 ok "Yes, We should"
                 submitter "bob"
                 parameters {
