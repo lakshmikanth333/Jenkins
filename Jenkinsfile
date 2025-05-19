@@ -5,6 +5,10 @@ pipeline {
         ENVIRONMENT2 = 'UAT'
 
     }
+    options {
+        disableConcurrentbuild()
+        timeout(time:10, unit:'SECONDS')
+    }
     stages {
         stage('Build') {
             steps {
@@ -15,10 +19,6 @@ pipeline {
 
         }
         stage('UAT') {
-            options {
-                timeout( time:10, unit: 'SECONDS')
-            }
-            }
             steps {
                 sh """
                 echo "This is $ENVIRONMENT2 area"
@@ -35,4 +35,5 @@ pipeline {
         }
     }
 
+    }
 }
