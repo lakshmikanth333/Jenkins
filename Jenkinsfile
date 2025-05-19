@@ -63,27 +63,26 @@
 // }
 
 pipeline {
-    agent { label 'slave'}
+    agent { label 'slave' }
     stages {
         stage('Build') {
             parallel {
-                stage(STAGE-1) {
+                stage('STAGE-1') {  // Stage names must be quoted
                     steps {
-                        sh """
+                        sh '''
                         echo "this is stage-1"
-                        """
+                        '''
                     }
-                stage(STAGE-2) {
+                }
+                stage('STAGE-2') {  // Missing closing brace fixed
                     steps {
-                        sh """
+                        sh '''
                         echo "this is stage-2"
-                        """
+                        '''
                     }
-                }    
                 }
             }
         }
-
     }
 }
 
