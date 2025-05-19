@@ -39,9 +39,16 @@ pipeline {
 
         }
         stage('UAT') {
+            input {
+                message "Should we continue"
+                ok "Yes, We should"
+                submitter "bob"
+               
+            }
             steps {
-                input message: 'Deploy to production?', ok: 'Yes'
-                
+                when {
+                    environment name: 'ENVIRONMENT2' default: 'UAT'
+                }
                 sh """
                 echo "This is $ENVIRONMENT2 area"
                 """
