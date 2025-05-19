@@ -48,7 +48,7 @@ pipeline {
     
     post {
         success {
-            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed"
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed
         }
         failure {
             echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed
