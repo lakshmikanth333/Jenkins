@@ -1,26 +1,26 @@
 pipeline {
     agent { label 'slave'}
+    environment {
+        ENVIRONMENT1 = 'BUILD'
+        ENVIRONMENT2 = 'UAT'
+
+    }
     stages {
         stage('Build') {
             steps {
                 sh """
-                echo "Look at the status"
+                echo "This is $ENVIRONMENT1 area"
                 """
             }
 
         }
+        stage('UAT') {
+            steps {
+                sh """
+                echo "This is $ENVIRONMENT2 area"
+                """
+            }
+        }
           
     }
-    post {
-        success {
-            echo "It got succeeded"
-        }
-        failure {
-            echo "It got failed"
-        }
-        always {
-            echo "Always"
-        }
-    }
-
 }
