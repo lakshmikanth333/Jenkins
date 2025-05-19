@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry(5) {
+                retry(1) {
                 sh """
                 echo "This is $ENVIRONMENT1 area"
                 echo "the string is: ${params.LAKSHMIKANTH}"
@@ -40,7 +40,7 @@ pipeline {
         stage('UAT') {
             steps {
                 sh """
-                echo "This is $ENVIRONMENT2 area
+                echo "This is $ENVIRONMENT2 area"
                 """
             }
         }
@@ -48,10 +48,10 @@ pipeline {
     
     post {
         success {
-            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed"
         }
         failure {
-            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed"
         }
     }
 
