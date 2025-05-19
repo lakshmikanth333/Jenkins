@@ -47,7 +47,7 @@ pipeline {
             }
             steps {
                 when {
-                    environment name: 'ENVIRONMENT2', default: 'UAT'
+                    environment name: 'ENVIRONMENT2', value: 'UAT'
                 }
                 sh """
                 echo "This is $ENVIRONMENT2 area"
