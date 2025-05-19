@@ -51,7 +51,7 @@ pipeline {
             echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got succesed"
         }
         failure {
-            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed"
+            echo "$ENVIRONMENT1 area &  $ENVIRONMENT2 area got failed
         }
     }
 
