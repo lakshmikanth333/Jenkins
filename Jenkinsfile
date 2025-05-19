@@ -17,6 +17,7 @@ pipeline {
         password(name: 'JENKINS', defaultValue: '3K3Klks$', description: 'password for the jenkins')
         file(name: 'DATA_FILE', description: 'upload a file')
         booleanParam(name: 'TOGGLE', defaultValue: 'false', description: 'selected value')
+        booleanParam(name: 'DEBUG_MODE', defaultValue: false, description: 'Enable debug mode?')
     }
     stages {
         stage('Build') {
