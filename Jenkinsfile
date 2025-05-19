@@ -43,9 +43,7 @@ pipeline {
                 message "Should we continue"
                 ok "Yes, We should"
                 submitter "bob"
-                // parameters {
-                    // string(name: 'BOB' defaultValue: 'Justin', description: 'should we hello')
-                }
+               
             }
             steps {
                 sh """
