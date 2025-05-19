@@ -10,6 +10,11 @@ pipeline {
         timeout(time:10, unit:'SECONDS')
         retry(3)
     }
+    parameters {
+        string(name: 'LAKSHMIKANTH', defaultvalue: 'he is a devops engineer', description: "He is a genius guy")
+        text(name: 'SAI', defaultvalue: 'linux admin', description: 'etrade')
+        choice(name: 'SHIVA', choices: ['one', 'thirteen', 'three'], description: 'years of exp')
+    }
     stages {
         stage('Build') {
             steps {
