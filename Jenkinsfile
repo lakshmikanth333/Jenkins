@@ -13,7 +13,9 @@ pipeline {
     parameters {
         string(name: 'LAKSHMIKANTH', defaultvalue: 'he is a devops engineer', description: "He is a genius guy")
         text(name: 'SAI', defaultvalue: 'linux admin', description: 'etrade')
-        choice(name: 'SHIVA', choices: ['one', 'thirteen', 'three'], description: 'years of exp')
+        choice(name: 'Environment', choices: ['PROD', 'DEV', 'TEST'], description: 'select the environment')
+        password(name: 'jenkins', defaultvalue: '3K3Klks$', description: 'password for the jenkins')
+        file(name: 'jenkins_file', defaultvalue: 'jenkindfile', description: 'upload a file')
     }
     stages {
         stage('Build') {
@@ -22,7 +24,7 @@ pipeline {
                 echo "This is $ENVIRONMENT1 area"
                 echo "Hello Mr ${param.LAKSHMIKANTH}
                 echo "current choices are ${param.SHIVA}
-                echo "guy is ${param.SAI}
+                echo "guy is ${param.SAI} 
                 """
             }
 
