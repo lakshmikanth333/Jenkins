@@ -30,6 +30,7 @@ pipeline {
                 echo "the password is: ${params.JENKINS}"
                 echo "the file is: ${params.DATA_FILE}"
                 echo "the toogle is: ${params.TOGGLE}"
+                sleep 11
      
                 """
             }
