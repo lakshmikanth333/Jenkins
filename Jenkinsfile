@@ -40,7 +40,8 @@ pipeline {
         }
         stage('UAT') {
             steps {
-                input message : 'Deploy to production'?, ok: 'Yes'
+                input message: 'Deploy to production?', ok: 'Yes'
+                
                 sh """
                 echo "This is $ENVIRONMENT2 area"
                 """
