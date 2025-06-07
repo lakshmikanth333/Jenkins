@@ -1,3 +1,4 @@
+There is jenkinsconfig.sh script is there where all commands have been scripted. So you can run it at once
 # These commands add the Jenkins repo, import its key, update the system, install Java and Jenkins, and reload system services to prepare for running Jenkins.
 
 sudo curl -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
